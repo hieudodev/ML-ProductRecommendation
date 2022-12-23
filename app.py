@@ -91,7 +91,7 @@ def main():
         file_uploaded = st.file_uploader("Chọn File", type=["png", "jpg", "jpeg"])
         st.write(file_uploaded.name)
         if file_uploaded is not None:
-            path = file_selector + f'{file_uploaded.name}'
+            path = file_selector() + f'{file_uploaded.name}'
             im1 = Image.open(file_uploaded)
             newsize = (224, 320)
             image1= im1.resize(newsize)
